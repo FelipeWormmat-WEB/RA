@@ -1,0 +1,184 @@
+# ISim flow : Creating project file
+felipewgb_stx.prj
+felipewgb.isim_stx_prj
+work
+# ISim : Check Syntax for Simulation
+*.auxlib
+isim
+isim_temp
+xilinxsim.ini
+felipewgb.isim_stx_sim
+# ISim flow : Creating project file
+felipewgb_lau.prj
+felipewgb.isim_lau_prj
+work
+# ISim : Launch Xilinx ISE Simulator
+ISIM_FILE_CPF
+felipewgb_lau.prj
+felipewgb_isim_lau.exe
+felipewgb.isim_lau_exe
+isim
+*.auxlib
+isim.tmp_save
+xilinxsim.ini
+# XST (Creating Lso File) : 
+felipewgb.lso
+# xst flow : RunXST
+felipewgb_summary.html
+# xst flow : RunXST
+felipewgb.syr
+felipewgb.prj
+felipewgb.sprj
+felipewgb.ana
+felipewgb.stx
+felipewgb.cmd_log
+felipewgb.ngc
+felipewgb.ngr
+# Implmentation : Translate
+__projnav/ednTOngd_tcl.rsp
+"c:\users\felipe\desktop\felipewgb/_ngo"
+felipewgb.ngd
+felipewgb_ngdbuild.nav
+felipewgb.bld
+.untf
+felipewgb.cmd_log
+# Create Timing Constraints
+# Implmentation : Translate
+__projnav/ednTOngd_tcl.rsp
+"c:\users\felipe\desktop\felipewgb/_ngo"
+felipewgb.ngd
+felipewgb_ngdbuild.nav
+felipewgb.bld
+felipewgb.ucf.untf
+felipewgb.cmd_log
+# Implementation : Map
+felipewgb_summary.html
+# Implementation : Map
+felipewgb_map.ncd
+felipewgb.ngm
+felipewgb.pcf
+felipewgb.nc1
+felipewgb.mrp
+felipewgb_map.mrp
+felipewgb.mdf
+felipewgb.cmd_log
+MAP_NO_GUIDE_FILE_CPF "felipewgb"
+felipewgb_map.ngm
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+felipewgb.twr
+felipewgb.twx
+felipewgb.tsi
+felipewgb.cmd_log
+# Implementation : Place & Route
+felipewgb_summary.html
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+felipewgb.ncd
+felipewgb.par
+felipewgb.pad
+felipewgb_pad.txt
+felipewgb_pad.csv
+felipewgb.pad_txt
+felipewgb.dly
+reportgen.log
+felipewgb.xpi
+felipewgb.grf
+felipewgb.itr
+felipewgb_last_par.ncd
+felipewgb.placed_ncd_tracker
+felipewgb.routed_ncd_tracker
+felipewgb.cmd_log
+PAR_NO_GUIDE_FILE_CPF "felipewgb"
+# Generate Programming File
+__projnav/felipewgb_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+felipewgb.ut
+# Generate Programming File
+felipewgb.bgn
+felipewgb.rbt
+felipewgb.ll
+felipewgb.msk
+felipewgb.drc
+felipewgb.nky
+felipewgb.bit
+felipewgb.bin
+felipewgb.isc
+felipewgb.cmd_log
+# XST (Creating Lso File) : 
+felipewgb.lso
+# xst flow : RunXST
+felipewgb_summary.html
+# xst flow : RunXST
+felipewgb.syr
+felipewgb.prj
+felipewgb.sprj
+felipewgb.ana
+felipewgb.stx
+felipewgb.cmd_log
+felipewgb.ngc
+felipewgb.ngr
+# Implmentation : Translate
+__projnav/ednTOngd_tcl.rsp
+"c:\users\felipe\desktop\felipewgb/_ngo"
+felipewgb.ngd
+felipewgb_ngdbuild.nav
+felipewgb.bld
+felipewgb.ucf.untf
+felipewgb.cmd_log
+# Implementation : Map
+felipewgb_summary.html
+# Implementation : Map
+felipewgb_map.ncd
+felipewgb.ngm
+felipewgb.pcf
+felipewgb.nc1
+felipewgb.mrp
+felipewgb_map.mrp
+felipewgb.mdf
+felipewgb.cmd_log
+MAP_NO_GUIDE_FILE_CPF "felipewgb"
+felipewgb_map.ngm
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+felipewgb.twr
+felipewgb.twx
+felipewgb.tsi
+felipewgb.cmd_log
+# Implementation : Place & Route
+felipewgb_summary.html
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+felipewgb.ncd
+felipewgb.par
+felipewgb.pad
+felipewgb_pad.txt
+felipewgb_pad.csv
+felipewgb.pad_txt
+felipewgb.dly
+reportgen.log
+felipewgb.xpi
+felipewgb.grf
+felipewgb.itr
+felipewgb_last_par.ncd
+felipewgb.placed_ncd_tracker
+felipewgb.routed_ncd_tracker
+felipewgb.cmd_log
+PAR_NO_GUIDE_FILE_CPF "felipewgb"
+# Generate Programming File
+__projnav/felipewgb_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+felipewgb.ut
+# Generate Programming File
+felipewgb.bgn
+felipewgb.rbt
+felipewgb.ll
+felipewgb.msk
+felipewgb.drc
+felipewgb.nky
+felipewgb.bit
+felipewgb.bin
+felipewgb.isc
+felipewgb.cmd_log

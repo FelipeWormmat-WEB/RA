@@ -1,0 +1,810 @@
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+
+
+
+
+Started process "Check Syntax for Simulation".
+
+Compiling vhdl file "C:/Users/Felipe/Desktop/FelipeWGB/FelipeWGB.vhd" in Library isim_temp.
+Entity <FelipeWGB> compiled.
+Entity <FelipeWGB> (Architecture <Comportamental>) compiled.
+Parsing "felipewgb_stx.prj": 0.02
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+
+
+
+Plugin HSimPlugin couldn't be found
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+
+
+
+
+
+
+
+Started process "Synthesize".
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Felipe/Desktop/FelipeWGB/FelipeWGB.vhd" in Library work.
+Entity <FelipeWGB> compiled.
+Entity <FelipeWGB> (Architecture <Comportamental>) compiled.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <felipewgb> (Architecture <Comportamental>).
+INFO:Xst:1304 - Contents of register <trans> in unit <felipewgb> never changes during circuit operation. The register is replaced by logic.
+Entity <felipewgb> analyzed. Unit <felipewgb> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <felipewgb>.
+    Related source file is "C:/Users/Felipe/Desktop/FelipeWGB/FelipeWGB.vhd".
+    Found 23-bit up counter for signal <cont>.
+    Found 1-bit register for signal <est<0>>.
+    Found 8-bit register for signal <seg>.
+    Found 3-bit up counter for signal <un>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   9 D-type flip-flop(s).
+Unit <felipewgb> synthesized.
+
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Advanced RAM inference ...
+Advanced multiplier inference ...
+Advanced Registered AddSub inference ...
+Dynamic shift register inference ...
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                         : 2
+ 23-bit up counter                 : 1
+ 3-bit up counter                  : 1
+# Registers                        : 2
+ 1-bit register                    : 1
+ 8-bit register                    : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Register <seg_2> equivalent to <seg_0> has been removed
+Register <seg_6> equivalent to <seg_3> has been removed
+
+Optimizing unit <felipewgb> ...
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:/Users/Felipe/Desktop/Xilinx.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block felipewgb, actual ratio is 0.
+FlipFlop seg_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      25  out of   4656     0%  
+ Number of Slice Flip Flops:            34  out of   9312     0%  
+ Number of 4 input LUTs:                43  out of   9312     0%  
+ Number of bonded IOBs:                 15  out of    232     6%  
+ Number of GCLKs:                        1  out of     24     4%  
+
+
+=========================================================================
+TIMING REPORT
+
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 34    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.362ns (Maximum Frequency: 135.833MHz)
+   Minimum input arrival time before clock: 7.466ns
+   Maximum output required time after clock: 8.062ns
+   Maximum combinational path delay: No path found
+
+=========================================================================
+
+
+
+
+Started process "Translate".
+
+
+Command Line: ngdbuild -intstyle ise -dd c:\users\felipe\desktop\felipewgb/_ngo
+-nt timestamp -i -p xc3s500e-fg320-4 felipewgb.ngc felipewgb.ngd 
+
+Reading NGO file 'C:/Users/Felipe/Desktop/FelipeWGB/felipewgb.ngc' ...
+
+Checking timing specifications ...
+Checking expanded design ...
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGD file "felipewgb.ngd" ...
+
+Writing NGDBUILD log file "felipewgb.bld"...
+
+NGDBUILD done.
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+
+Started process "Translate".
+
+
+Command Line: ngdbuild -intstyle ise -dd c:\users\felipe\desktop\felipewgb/_ngo
+-nt timestamp -uc felipewgb.ucf -p xc3s500e-fg320-4 felipewgb.ngc felipewgb.ngd 
+
+Reading NGO file 'C:/Users/Felipe/Desktop/FelipeWGB/felipewgb.ngc' ...
+
+Applying constraints in "felipewgb.ucf" to the design...
+
+Checking timing specifications ...
+Checking expanded design ...
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGD file "felipewgb.ngd" ...
+
+Writing NGDBUILD log file "felipewgb.bld"...
+
+NGDBUILD done.
+
+
+
+
+Started process "Map".
+
+Using target part "3s500efg320-4".
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:          28 out of   9,312    1%
+  Number of 4 input LUTs:              43 out of   9,312    1%
+Logic Distribution:
+  Number of occupied Slices:                           24 out of   4,656    1%
+    Number of Slices containing only related logic:      24 out of      24  100%
+    Number of Slices containing unrelated logic:          0 out of      24    0%
+      *See NOTES below for an explanation of the effects of unrelated logic
+Total Number of 4 input LUTs:          43 out of   9,312    1%
+  Number of bonded IOBs:               15 out of     232    6%
+    IOB Flip Flops:                     6
+  Number of GCLKs:                     1 out of      24    4%
+
+Total equivalent gate count for design:  671
+Additional JTAG gate count for IOBs:  720
+Peak Memory Usage:  190 MB
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "felipewgb_map.mrp" for details.
+
+
+
+
+Started process "Place & Route".
+
+
+
+
+Constraints file: felipewgb.pcf.
+Loading device for application Rf_Device from file '3s500e.nph' in environment
+C:/Users/Felipe/Desktop/Xilinx.
+   "felipewgb" is an NCD, version 3.1, device xc3s500e, package fg320, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000
+Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "ADVANCED 1.13 2005-05-13".
+
+
+Device Utilization Summary:
+
+   Number of BUFGMUXs                  1 out of 24      4%
+   Number of External IBUFs            3 out of 232     1%
+      Number of LOCed IBUFs            3 out of 3     100%
+
+   Number of External IOBs            12 out of 176     6%
+      Number of LOCed IOBs            12 out of 12    100%
+
+   Number of Slices                   24 out of 4656    1%
+      Number of SLICEMs                0 out of 2328    0%
+
+
+
+Overall effort level (-ol):   Standard (set by user)
+Placer effort level (-pl):    Standard (set by user)
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard (set by user)
+
+Starting initial Timing Analysis.  REAL time: 2 secs 
+Finished initial Timing Analysis.  REAL time: 2 secs 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:989710) REAL time: 2 secs 
+
+Phase 2.31
+Phase 2.31 (Checksum:1312cfe) REAL time: 2 secs 
+
+Phase 3.2
+.
+
+
+Phase 3.2 (Checksum:1c9c37d) REAL time: 4 secs 
+
+Phase 4.30
+Phase 4.30 (Checksum:26259fc) REAL time: 4 secs 
+
+Phase 5.8
+...
+.
+Phase 5.8 (Checksum:98fe80) REAL time: 4 secs 
+
+Phase 6.5
+Phase 6.5 (Checksum:39386fa) REAL time: 4 secs 
+
+Phase 7.18
+Phase 7.18 (Checksum:42c1d79) REAL time: 4 secs 
+
+Phase 8.5
+Phase 8.5 (Checksum:4c4b3f8) REAL time: 4 secs 
+
+Writing design to file felipewgb.ncd
+
+
+Total REAL time to Placer completion: 4 secs 
+Total CPU time to Placer completion: 4 secs 
+
+Starting Router
+
+Phase 1: 220 unrouted;       REAL time: 5 secs 
+
+Phase 2: 193 unrouted;       REAL time: 5 secs 
+
+Phase 3: 19 unrouted;       REAL time: 5 secs 
+
+Phase 4: 19 unrouted; (203)      REAL time: 5 secs 
+
+Phase 5: 22 unrouted; (0)      REAL time: 5 secs 
+
+Phase 6: 22 unrouted; (0)      REAL time: 5 secs 
+
+Phase 7: 0 unrouted; (0)      REAL time: 5 secs 
+
+Phase 8: 0 unrouted; (0)      REAL time: 5 secs 
+
+
+Total REAL time to Router completion: 5 secs 
+Total CPU time to Router completion: 5 secs 
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|           clk_BUFGP | BUFGMUX_X2Y11| No   |   21 |  0.020     |  1.070      |
++---------------------+--------------+------+------+------------+-------------+
+
+Timing Score: 0
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+--------------------------------------------------------------------------------
+  Constraint                                | Requested  | Actual     | Logic 
+                                            |            |            | Levels
+--------------------------------------------------------------------------------
+  TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH  | 10.000ns   | 9.131ns    | 3    
+  50%                                       |            |            |      
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 5 secs 
+Total CPU time to PAR completion: 5 secs 
+
+Peak Memory Usage:  168 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 0
+
+Writing design to file felipewgb.ncd
+
+
+
+PAR done!
+
+Started process "Generate Post-Place & Route Static Timing".
+
+Loading device for application Rf_Device from file '3s500e.nph' in environment
+C:/Users/Felipe/Desktop/Xilinx.
+   "felipewgb" is an NCD, version 3.1, device xc3s500e, package fg320, speed -4
+
+Analysis completed Wed Apr 24 20:47:40 2024
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 0
+Total time: 2 secs 
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+
+
+
+
+Started process "Generate Programming File".
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+
+
+
+
+
+
+
+Started process "Synthesize".
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Felipe/Desktop/FelipeWGB/FelipeWGB.vhd" in Library work.
+Entity <felipewgb> compiled.
+Entity <felipewgb> (Architecture <comportamental>) compiled.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <felipewgb> (Architecture <comportamental>).
+INFO:Xst:1304 - Contents of register <trans> in unit <felipewgb> never changes during circuit operation. The register is replaced by logic.
+Entity <felipewgb> analyzed. Unit <felipewgb> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <felipewgb>.
+    Related source file is "C:/Users/Felipe/Desktop/FelipeWGB/FelipeWGB.vhd".
+    Found 23-bit up counter for signal <cont>.
+    Found 1-bit register for signal <est<0>>.
+    Found 8-bit register for signal <seg>.
+    Found 3-bit up counter for signal <un>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   9 D-type flip-flop(s).
+Unit <felipewgb> synthesized.
+
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Advanced RAM inference ...
+Advanced multiplier inference ...
+Advanced Registered AddSub inference ...
+Dynamic shift register inference ...
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                         : 2
+ 23-bit up counter                 : 1
+ 3-bit up counter                  : 1
+# Registers                        : 2
+ 1-bit register                    : 1
+ 8-bit register                    : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Register <seg_2> equivalent to <seg_0> has been removed
+Register <seg_6> equivalent to <seg_3> has been removed
+
+Optimizing unit <felipewgb> ...
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:/Users/Felipe/Desktop/Xilinx.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block felipewgb, actual ratio is 0.
+FlipFlop seg_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      25  out of   4656     0%  
+ Number of Slice Flip Flops:            34  out of   9312     0%  
+ Number of 4 input LUTs:                43  out of   9312     0%  
+ Number of bonded IOBs:                 15  out of    232     6%  
+ Number of GCLKs:                        1  out of     24     4%  
+
+
+=========================================================================
+TIMING REPORT
+
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 34    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.362ns (Maximum Frequency: 135.833MHz)
+   Minimum input arrival time before clock: 7.466ns
+   Maximum output required time after clock: 8.062ns
+   Maximum combinational path delay: No path found
+
+=========================================================================
+
+
+
+
+Started process "Translate".
+
+
+Command Line: ngdbuild -intstyle ise -dd c:\users\felipe\desktop\felipewgb/_ngo
+-nt timestamp -uc felipewgb.ucf -p xc3s500e-fg320-4 felipewgb.ngc felipewgb.ngd 
+
+Reading NGO file 'C:/Users/Felipe/Desktop/FelipeWGB/felipewgb.ngc' ...
+
+Applying constraints in "felipewgb.ucf" to the design...
+
+Checking timing specifications ...
+Checking expanded design ...
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGD file "felipewgb.ngd" ...
+
+Writing NGDBUILD log file "felipewgb.bld"...
+
+NGDBUILD done.
+
+
+
+
+Started process "Map".
+
+Using target part "3s500efg320-4".
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:          28 out of   9,312    1%
+  Number of 4 input LUTs:              43 out of   9,312    1%
+Logic Distribution:
+  Number of occupied Slices:                           24 out of   4,656    1%
+    Number of Slices containing only related logic:      24 out of      24  100%
+    Number of Slices containing unrelated logic:          0 out of      24    0%
+      *See NOTES below for an explanation of the effects of unrelated logic
+Total Number of 4 input LUTs:          43 out of   9,312    1%
+  Number of bonded IOBs:               15 out of     232    6%
+    IOB Flip Flops:                     6
+  Number of GCLKs:                     1 out of      24    4%
+
+Total equivalent gate count for design:  671
+Additional JTAG gate count for IOBs:  720
+Peak Memory Usage:  190 MB
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "felipewgb_map.mrp" for details.
+
+
+
+
+Started process "Place & Route".
+
+
+
+
+Constraints file: felipewgb.pcf.
+Loading device for application Rf_Device from file '3s500e.nph' in environment
+C:/Users/Felipe/Desktop/Xilinx.
+   "felipewgb" is an NCD, version 3.1, device xc3s500e, package fg320, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000
+Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "ADVANCED 1.13 2005-05-13".
+
+
+Device Utilization Summary:
+
+   Number of BUFGMUXs                  1 out of 24      4%
+   Number of External IBUFs            3 out of 232     1%
+      Number of LOCed IBUFs            3 out of 3     100%
+
+   Number of External IOBs            12 out of 176     6%
+      Number of LOCed IOBs            12 out of 12    100%
+
+   Number of Slices                   24 out of 4656    1%
+      Number of SLICEMs                0 out of 2328    0%
+
+
+
+Overall effort level (-ol):   Standard (set by user)
+Placer effort level (-pl):    Standard (set by user)
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard (set by user)
+
+Starting initial Timing Analysis.  REAL time: 2 secs 
+Finished initial Timing Analysis.  REAL time: 2 secs 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:989710) REAL time: 2 secs 
+
+Phase 2.31
+Phase 2.31 (Checksum:1312cfe) REAL time: 2 secs 
+
+Phase 3.2
+.
+
+
+Phase 3.2 (Checksum:1c9c37d) REAL time: 3 secs 
+
+Phase 4.30
+Phase 4.30 (Checksum:26259fc) REAL time: 3 secs 
+
+Phase 5.8
+...
+.
+Phase 5.8 (Checksum:98fe80) REAL time: 3 secs 
+
+Phase 6.5
+Phase 6.5 (Checksum:39386fa) REAL time: 3 secs 
+
+Phase 7.18
+Phase 7.18 (Checksum:42c1d79) REAL time: 3 secs 
+
+Phase 8.5
+Phase 8.5 (Checksum:4c4b3f8) REAL time: 3 secs 
+
+Writing design to file felipewgb.ncd
+
+
+Total REAL time to Placer completion: 3 secs 
+Total CPU time to Placer completion: 3 secs 
+
+Starting Router
+
+Phase 1: 220 unrouted;       REAL time: 4 secs 
+
+Phase 2: 193 unrouted;       REAL time: 4 secs 
+
+Phase 3: 19 unrouted;       REAL time: 4 secs 
+
+Phase 4: 19 unrouted; (203)      REAL time: 4 secs 
+
+Phase 5: 22 unrouted; (0)      REAL time: 4 secs 
+
+Phase 6: 22 unrouted; (0)      REAL time: 4 secs 
+
+Phase 7: 0 unrouted; (0)      REAL time: 5 secs 
+
+Phase 8: 0 unrouted; (0)      REAL time: 5 secs 
+
+
+Total REAL time to Router completion: 5 secs 
+Total CPU time to Router completion: 5 secs 
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|           clk_BUFGP | BUFGMUX_X2Y11| No   |   21 |  0.020     |  1.070      |
++---------------------+--------------+------+------+------------+-------------+
+
+Timing Score: 0
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+--------------------------------------------------------------------------------
+  Constraint                                | Requested  | Actual     | Logic 
+                                            |            |            | Levels
+--------------------------------------------------------------------------------
+  TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH  | 10.000ns   | 9.131ns    | 3    
+  50%                                       |            |            |      
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 5 secs 
+Total CPU time to PAR completion: 5 secs 
+
+Peak Memory Usage:  168 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 0
+
+Writing design to file felipewgb.ncd
+
+
+
+PAR done!
+
+Started process "Generate Post-Place & Route Static Timing".
+
+Loading device for application Rf_Device from file '3s500e.nph' in environment
+C:/Users/Felipe/Desktop/Xilinx.
+   "felipewgb" is an NCD, version 3.1, device xc3s500e, package fg320, speed -4
+
+Analysis completed Wed Apr 24 20:50:06 2024
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 0
+Total time: 2 secs 
+
+
+
+
+
+
+
+Started process "Generate Programming File".
+
+

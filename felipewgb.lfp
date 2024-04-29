@@ -1,0 +1,20 @@
+# begin LFP file C:\Users\Felipe\Desktop\FelipeWGB\felipewgb.lfp
+designfile FelipeWGB.vhd
+parttype xc3s500e-4-fg320
+bus_delimiter -1;
+set_busdelim_onsave 1;
+IO_GROUP "disp" IO_GROUP="FelipeWGB" ;
+IO_GROUP "unid" IO_GROUP="FelipeWGB" ;
+INST "FelipeWGB" COLOR=15  ;
+NET "disp<7>" IO_GROUP="disp"  ;
+NET "disp<6>" IO_GROUP="disp"  ;
+NET "disp<5>" IO_GROUP="disp"  ;
+NET "disp<4>" IO_GROUP="disp"  ;
+NET "disp<3>" IO_GROUP="disp"  ;
+NET "disp<2>" IO_GROUP="disp"  ;
+NET "disp<1>" IO_GROUP="disp"  ;
+NET "disp<0>" IO_GROUP="disp"  ;
+NET "unid<3>" IO_GROUP="unid"  ;
+NET "unid<2>" IO_GROUP="unid"  ;
+NET "unid<1>" IO_GROUP="unid"  ;
+NET "unid<0>" IO_GROUP="unid"  ;

@@ -1,0 +1,7 @@
+V2 3
+FL C:/Users/Felipe/Desktop/FelipeWGB/FelipeWGB.vhd 2024/04/24.20:49:46 H.41
+EN work/FELIPEWGB 1714002592       FL C:/Users/Felipe/Desktop/FelipeWGB/FelipeWGB.vhd \
+      PB ieee/STD_LOGIC_1164 1106404628 PB ieee/STD_LOGIC_ARITH 1106404630 \
+      PB ieee/STD_LOGIC_UNSIGNED 1106404634
+AR work/FELIPEWGB/COMPORTAMENTAL 1714002593 \
+      FL C:/Users/Felipe/Desktop/FelipeWGB/FelipeWGB.vhd EN work/FELIPEWGB 1714002592

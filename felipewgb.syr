@@ -1,0 +1,345 @@
+Release 7.1.03i - xst H.41
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to __projnav
+CPU : 0.00 / 0.14 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.14 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: felipewgb.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+  5) Advanced HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "felipewgb.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "felipewgb"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : felipewgb
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Equivalent register Removal        : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+Global Optimization                : AllClockNets
+RTL Output                         : Yes
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : felipewgb.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+enable_auto_floorplanning          : No
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Felipe/Desktop/FelipeWGB/FelipeWGB.vhd" in Library work.
+Entity <felipewgb> compiled.
+Entity <felipewgb> (Architecture <comportamental>) compiled.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <felipewgb> (Architecture <comportamental>).
+INFO:Xst:1304 - Contents of register <trans> in unit <felipewgb> never changes during circuit operation. The register is replaced by logic.
+Entity <felipewgb> analyzed. Unit <felipewgb> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <felipewgb>.
+    Related source file is "C:/Users/Felipe/Desktop/FelipeWGB/FelipeWGB.vhd".
+    Found 23-bit up counter for signal <cont>.
+    Found 1-bit register for signal <est<0>>.
+    Found 8-bit register for signal <seg>.
+    Found 3-bit up counter for signal <un>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   9 D-type flip-flop(s).
+Unit <felipewgb> synthesized.
+
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Advanced RAM inference ...
+Advanced multiplier inference ...
+Advanced Registered AddSub inference ...
+Dynamic shift register inference ...
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                         : 2
+ 23-bit up counter                 : 1
+ 3-bit up counter                  : 1
+# Registers                        : 2
+ 1-bit register                    : 1
+ 8-bit register                    : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Register <seg_2> equivalent to <seg_0> has been removed
+Register <seg_6> equivalent to <seg_3> has been removed
+
+Optimizing unit <felipewgb> ...
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:/Users/Felipe/Desktop/Xilinx.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block felipewgb, actual ratio is 0.
+FlipFlop seg_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : felipewgb.ngr
+Top Level Output File Name         : felipewgb
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 15
+
+Macro Statistics :
+# Registers                        : 3
+#      1-bit register              : 1
+#      3-bit register              : 1
+#      8-bit register              : 1
+# Counters                         : 1
+#      23-bit up counter           : 1
+
+Cell Usage :
+# BELS                             : 92
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 3
+#      LUT2_D                      : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 8
+#      LUT3_L                      : 23
+#      LUT4                        : 5
+#      LUT4_D                      : 1
+#      LUT4_L                      : 1
+#      MUXCY                       : 23
+#      VCC                         : 1
+#      XORCY                       : 23
+# FlipFlops/Latches                : 34
+#      FDCE                        : 4
+#      FDCPE                       : 23
+#      FDPE                        : 7
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 2
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      25  out of   4656     0%  
+ Number of Slice Flip Flops:            34  out of   9312     0%  
+ Number of 4 input LUTs:                43  out of   9312     0%  
+ Number of bonded IOBs:                 15  out of    232     6%  
+ Number of GCLKs:                        1  out of     24     4%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 34    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.362ns (Maximum Frequency: 135.833MHz)
+   Minimum input arrival time before clock: 7.466ns
+   Maximum output required time after clock: 8.062ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.362ns (frequency: 135.833MHz)
+  Total number of paths / destination ports: 896 / 66
+-------------------------------------------------------------------------
+Delay:               7.362ns (Levels of Logic = 3)
+  Source:            cont_1 (FF)
+  Destination:       seg_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: cont_1 to seg_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCPE:C->Q            2   0.455   1.082  cont_1 (cont_1)
+     LUT4:I0->O            1   0.757   0.802  _n000280 (CHOICE97)
+     LUT4:I3->O            3   0.778   0.961  _n000284 (CHOICE98)
+     LUT3:I2->O           10   0.757   1.134  _n0002109 (_n0002)
+     FDCE:CE                   0.636          un_2
+    ----------------------------------------
+    Total                      7.362ns (3.383ns logic, 3.979ns route)
+                                       (46.0% logic, 54.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 323 / 47
+-------------------------------------------------------------------------
+Offset:              7.466ns (Levels of Logic = 26)
+  Source:            clk_in (PAD)
+  Destination:       cont_22 (FF)
+  Destination Clock: clk rising
+
+  Data Path: clk_in to cont_22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            25   1.228   2.018  clk_in_IBUF (clk_in_IBUF)
+     LUT2_D:I0->LO         1   0.757   0.000  _n00071 (N84)
+     MUXCY:S->O            1   0.476   0.000  cont_inst_cy_0 (cont_inst_cy_0)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_1 (cont_inst_cy_1)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_2 (cont_inst_cy_2)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_3 (cont_inst_cy_3)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_4 (cont_inst_cy_4)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_5 (cont_inst_cy_5)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_6 (cont_inst_cy_6)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_7 (cont_inst_cy_7)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_8 (cont_inst_cy_8)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_9 (cont_inst_cy_9)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_10 (cont_inst_cy_10)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_11 (cont_inst_cy_11)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_12 (cont_inst_cy_12)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_13 (cont_inst_cy_13)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_14 (cont_inst_cy_14)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_15 (cont_inst_cy_15)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_16 (cont_inst_cy_16)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_17 (cont_inst_cy_17)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_18 (cont_inst_cy_18)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_19 (cont_inst_cy_19)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_20 (cont_inst_cy_20)
+     MUXCY:CI->O           1   0.072   0.000  cont_inst_cy_21 (cont_inst_cy_21)
+     MUXCY:CI->O           0   0.072   0.000  cont_inst_cy_22 (cont_inst_cy_22)
+     XORCY:CI->O           1   0.974   0.000  cont_inst_sum_22 (cont_inst_sum_22)
+     FDCPE:D                   0.418          cont_22
+    ----------------------------------------
+    Total                      7.466ns (5.448ns logic, 2.018ns route)
+                                       (73.0% logic, 27.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              8.062ns (Levels of Logic = 1)
+  Source:            seg_3 (FF)
+  Destination:       disp<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: seg_3 to disp<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             2   0.455   0.877  seg_3 (seg_3)
+     OBUF:I->O                 6.730          disp_6_OBUF (disp<6>)
+    ----------------------------------------
+    Total                      8.062ns (7.185ns logic, 0.877ns route)
+                                       (89.1% logic, 10.9% route)
+
+=========================================================================
+CPU : 1.85 / 2.00 s | Elapsed : 2.00 / 2.00 s
+ 
+--> 
+
+Total memory usage is 179280 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

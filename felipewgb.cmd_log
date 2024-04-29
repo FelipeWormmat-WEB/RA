@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn __projnav/felipewgb.xst -ofn felipewgb.syr
+ngdbuild -intstyle ise -dd "c:\users\felipe\desktop\felipewgb/_ngo" -nt timestamp -i  -p xc3s500e-fg320-4 felipewgb.ngc felipewgb.ngd
+ngdbuild -intstyle ise -dd "c:\users\felipe\desktop\felipewgb/_ngo" -nt timestamp -uc felipewgb.ucf  -p xc3s500e-fg320-4 felipewgb.ngc felipewgb.ngd
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o felipewgb_map.ncd felipewgb.ngd felipewgb.pcf
+par -w -intstyle ise -ol std -t 1 felipewgb_map.ncd felipewgb.ncd felipewgb.pcf
+trce -intstyle ise -e 3 -l 3 -s 4 -xml felipewgb felipewgb.ncd -o felipewgb.twr felipewgb.pcf
+bitgen -intstyle ise -f felipewgb.ut felipewgb.ncd
+xst -intstyle ise -ifn __projnav/felipewgb.xst -ofn felipewgb.syr
+ngdbuild -intstyle ise -dd "c:\users\felipe\desktop\felipewgb/_ngo" -nt timestamp -uc felipewgb.ucf  -p xc3s500e-fg320-4 felipewgb.ngc felipewgb.ngd
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o felipewgb_map.ncd felipewgb.ngd felipewgb.pcf
+par -w -intstyle ise -ol std -t 1 felipewgb_map.ncd felipewgb.ncd felipewgb.pcf
+trce -intstyle ise -e 3 -l 3 -s 4 -xml felipewgb felipewgb.ncd -o felipewgb.twr felipewgb.pcf
+bitgen -intstyle ise -f felipewgb.ut felipewgb.ncd

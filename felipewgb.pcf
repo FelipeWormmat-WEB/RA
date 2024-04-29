@@ -1,0 +1,30 @@
+//! **************************************************************************
+// Written by: Map H.41 on Wed Apr 24 20:49:57 2024
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "unid<0>" LOCATE = SITE "F17" LEVEL 1;
+COMP "unid<1>" LOCATE = SITE "H17" LEVEL 1;
+COMP "unid<2>" LOCATE = SITE "C18" LEVEL 1;
+COMP "unid<3>" LOCATE = SITE "F15" LEVEL 1;
+COMP "disp<0>" LOCATE = SITE "L18" LEVEL 1;
+COMP "disp<1>" LOCATE = SITE "F18" LEVEL 1;
+COMP "disp<2>" LOCATE = SITE "D17" LEVEL 1;
+COMP "disp<3>" LOCATE = SITE "D16" LEVEL 1;
+COMP "disp<4>" LOCATE = SITE "G14" LEVEL 1;
+COMP "disp<5>" LOCATE = SITE "J17" LEVEL 1;
+COMP "disp<6>" LOCATE = SITE "H14" LEVEL 1;
+COMP "disp<7>" LOCATE = SITE "C17" LEVEL 1;
+COMP "clk_in" LOCATE = SITE "D18" LEVEL 1;
+COMP "rst" LOCATE = SITE "B18" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clk = BEL "seg_7" BEL "cont_20" BEL "seg_4" BEL "cont_16" BEL "seg_5"
+        BEL "seg_0" BEL "seg_1" BEL "est_0" BEL "seg_3" BEL "cont_18" BEL
+        "cont_15" BEL "un_2" BEL "cont_17" BEL "cont_14" BEL "cont_13" BEL
+        "un_0" BEL "un_1" BEL "cont_21" BEL "cont_22" BEL "cont_19" BEL
+        "cont_0" BEL "cont_1" BEL "cont_2" BEL "cont_3" BEL "cont_4" BEL
+        "cont_5" BEL "cont_6" BEL "cont_7" BEL "cont_8" BEL "cont_9" BEL
+        "cont_10" BEL "cont_11" BEL "cont_12" BEL "seg_0_1";
+TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+SCHEMATIC END;

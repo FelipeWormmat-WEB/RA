@@ -1,0 +1,64 @@
+--------------------------------------------------------------------------------
+Release 7.1.03i Trace H.41
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+C:/Users/Felipe/Desktop/Xilinx/bin/nt/trce.exe -ise
+c:\users\felipe\desktop\felipewgb\FelipeWGB.ise -intstyle ise -e 3 -l 3 -s 4
+-xml felipewgb felipewgb.ncd -o felipewgb.twr felipewgb.pcf
+
+
+Design file:              felipewgb.ncd
+Physical constraint file: felipewgb.pcf
+Device,speed:             xc3s500e,-4 (ADVANCED 1.13 2005-05-13)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+
+ 896 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   9.131ns.
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    9.131|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 896 paths, 0 nets, and 189 connections
+
+Design statistics:
+   Minimum period:   9.131ns (Maximum frequency: 109.517MHz)
+
+
+Analysis completed Wed Apr 24 20:50:06 2024
+--------------------------------------------------------------------------------
+
+
+
+Peak Memory Usage: 182 MB
